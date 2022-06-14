@@ -28,7 +28,8 @@ while cap.isOpened():
                  (640//2+30,480//2+30),
                   (255,255,255),3)
     #out.write(frame)
-    cv2.imshow('img',frame)
+    imS = cv2.resize(frame, (960, 540))   
+    cv2.imshow('img',imS)
     #cv2.imwrite('output_img.jpg',frame)
     
     read= str(ArduinoSerial.readline(ArduinoSerial.inWaiting()))
